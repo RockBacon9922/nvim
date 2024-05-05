@@ -556,6 +556,7 @@ require('lazy').setup({
         -- But for many setups, the LSP (`tsserver`) will work just fine
         tsserver = {},
         astro = {},
+        terraformls = {},
         --
 
         lua_ls = {
@@ -798,7 +799,7 @@ require('lazy').setup({
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     opts = {
-      ensure_installed = { 'bash', 'c', 'html', 'lua', 'markdown', 'vim', 'vimdoc', 'typescript', 'astro', 'rust' },
+      ensure_installed = { 'bash', 'c', 'html', 'lua', 'markdown', 'vim', 'vimdoc', 'typescript', 'astro', 'rust', 'tsx', 'hcl'},
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
