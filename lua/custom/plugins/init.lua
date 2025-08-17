@@ -3,5 +3,21 @@
 --
 -- See the kickstart.nvim README for more information
 return {
-  'github/copilot.vim',
+  {
+    'zbirenbaum/copilot.lua',
+    cmd = 'Copilot',
+    event = 'InsertEnter',
+    config = function()
+      require('copilot').setup {}
+    end,
+  },
+  {
+    'giuxtaposition/blink-cmp-copilot',
+    config = function()
+      require('copilot').setup {
+        suggestion = { enabled = false },
+        panel = { enabled = false },
+      }
+    end,
+  },
 }
