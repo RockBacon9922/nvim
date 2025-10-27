@@ -796,7 +796,11 @@ require('lazy').setup({
         --
         -- rust = { 'leptos', 'dioxus', 'rustfmt' },
         -- You can use 'stop_after_first' to run the first available formatter from the list
-        javascript = { 'biome', 'prettierd', 'prettier', stop_after_first = true },
+        javascript = { 'biome', stop_after_first = true },
+        typescript = { 'biome', stop_after_first = true },
+        javascriptreact = { 'biome', stop_after_first = true },
+        typescriptreact = { 'biome', stop_after_first = true },
+        json = { 'biome', stop_after_first = true },
       },
     },
   },
