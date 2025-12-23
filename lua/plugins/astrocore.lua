@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
 -- NOTE: We highly recommend setting up the Lua Language Server (`:LspInstall lua_ls`)
@@ -44,6 +42,7 @@ return {
         number = true, -- sets vim.opt.number
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
+        showtabline = 0, -- hide the buffer/tab line at the top
         wrap = false, -- sets vim.opt.wrap
       },
       g = { -- vim.g.<key>
@@ -58,6 +57,14 @@ return {
       -- first key is the mode
       n = {
         -- second key is the lefthand side of the map
+
+        ["<Leader>o"] = { vim.diagnostic.open_float, desc = "Open diagnostics float" },
+
+        ["<space>q"] = { vim.diagnostic.setloclist, desc = "Set diagnostics to loclist" },
+        ["<Leader>q"] = { vim.diagnostic.setloclist, desc = "Set diagnostics to loclist" },
+
+        -- set <Leader>grd to go to definition aswell
+        ["<Leader>grd"] = { vim.lsp.buf.definition, desc = "Go to definition" },
 
         -- navigate buffer tabs
         ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
