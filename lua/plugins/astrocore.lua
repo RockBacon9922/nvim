@@ -44,6 +44,7 @@ return {
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         showtabline = 0, -- hide the buffer/tab line at the top
         wrap = false, -- sets vim.opt.wrap
+        scrolloff = 7, -- sets vim.opt.scrolloff
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
