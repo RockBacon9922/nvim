@@ -11,7 +11,6 @@ return {
   { import = "astrocommunity.ai.opencode-nvim" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.rust" },
-  { import = "astrocommunity.editing-support.rustowl" },
   { import = "astrocommunity.pack.astro" },
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.tailwindcss" },
