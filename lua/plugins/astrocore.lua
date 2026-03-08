@@ -45,6 +45,7 @@ return {
         showtabline = 0, -- hide the buffer/tab line at the top
         wrap = false, -- sets vim.opt.wrap
         scrolloff = 7, -- sets vim.opt.scrolloff
+        exrc = true, -- enable exrc files
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
